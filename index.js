@@ -12,6 +12,7 @@ const whiteList = [
     'http://localhost:8000',
     'http://localhost:80',
     'http://localhost:3000',
+    'https://learning-express.onrender.com/'
 ]
 const options = {
     origin: (origin, callback) => {
@@ -22,7 +23,7 @@ const options = {
         }
     }
 }
-app.use(cors())
+app.use(cors(options))
 
 app.get('/', (req, res) => {
 
