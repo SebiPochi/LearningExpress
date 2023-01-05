@@ -8,22 +8,22 @@ const port = process.env.PORT || 3000
 
 app.use(express.json())
 
-const whiteList = [
-    'http://localhost:8000',
-    'http://localhost:80',
-    'http://localhost:3000',
-    'https://learning-express.onrender.com'
-]
-const options = {
-    origin: (origin, callback) => {
-        if(whiteList.includes(origin)){
-            callback(null, true)
-        } else {
-            callback(new Error('Not Allowed'))
-        }
-    }
-}
-app.use(cors(options))
+// const whiteList = [
+//     'http://localhost:8000',
+//     'http://localhost:80',
+//     'http://localhost:3000',
+//     'https://learning-express.onrender.com'
+// ]
+// const options = {
+//     origin: (origin, callback) => {
+//         if(whiteList.includes(origin)){
+//             callback(null, true)
+//         } else {
+//             callback(new Error('Not Allowed'))
+//         }
+//     }
+// }
+app.use(cors())
 
 app.get('/', (req, res) => {
 
