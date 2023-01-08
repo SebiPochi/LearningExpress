@@ -27,7 +27,7 @@ app.use(cors())
 
 app.get('/', (req, res) => {
 
-    res.send('AAAA')
+    res.send('api working properly')
 
 })
 
