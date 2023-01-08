@@ -14,6 +14,7 @@ class ProductServices {
             this.products.push({
                 id: faker.datatype.uuid(),
                 name: faker.commerce.productName(),
+                description: faker.commerce.productDescription(),
                 price: parseInt(faker.commerce.price(), 10),
                 image: faker.image.imageUrl(),
                 isBlocked: faker.datatype.boolean()

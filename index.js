@@ -31,15 +31,6 @@ app.get('/', (req, res) => {
 
 })
 
-app.get('/profile', (req, res) => {
-    res.json(
-        {
-            name: 'Pochi',
-            tuki: 120
-        }
-    )
-})
-
 routerApi(app)
 
 //se ejecutaran en orden
