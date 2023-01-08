@@ -36,7 +36,7 @@ routerApi(app)
 //se ejecutaran en orden
 app.use(boomErrorHandler)
 app.use(logErrors)
-app.use(errorHandler)
+// app.use(errorHandler)
 
 app.listen(port, () => {
     console.log(`Listening at port: ${port}`);
